@@ -14,8 +14,8 @@ const isActive = (routeName: string) => route.name === routeName
         <div class="flex flex-col lg:flex-row lg:justify-between items-center lg:h-16">
           <!-- Logo -->
           <div class="flex items-center gap-3 mb-4 lg:mb-0">
-            <div class="h-8 w-8 bg-blue-600 rounded-lg flex items-center gap-4 lg:gap-0 justify-center">
-              <span class="text-white font-bold text-lg">📊</span>
+            <div class="rounded-lg flex items-center gap-4 lg:gap-0 justify-center">
+              <img src="/newglobe.jpg" alt="New Globe" class="h-12 lg:h-14 w-12 lg:w-14 rounded-full object-cover" />
             </div>
             <span class="text-xl font-bold text-gray-900">L2 Service Desk</span>
           </div>

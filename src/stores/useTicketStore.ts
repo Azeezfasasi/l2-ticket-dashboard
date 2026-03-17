@@ -29,9 +29,9 @@ export const useTicketStore = defineStore('tickets', () => {
   // const USE_SHEETY = false
   
   // For now, using MOCK DATA for development
-  const USE_SHEETY = true
+  const USE_SHEETY = import.meta.env.VITE_USE_SHEETY === 'true'
   // New Sheety endpoint - using l2WebTicketsVersion workspace
-  const SHEETS_API = `https://api.sheety.co/73eef10e01519aaba5552fe70398e31d/l2WebTicketsVersion/sheet1`
+  const SHEETS_API = import.meta.env.VITE_SHEETS_API || ''
 
   // Mock data for development
   const initMockData = () => {
