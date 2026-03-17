@@ -195,8 +195,8 @@ export const useTicketStore = defineStore('tickets', () => {
     isLoading.value = true
     error.value = null
     try {
-      if (!SHEETS_API) {
-        // No API configured, use mock data
+      // If Sheety is disabled, use mock data immediately
+      if (!USE_SHEETY || !SHEETS_API || SHEETS_API === 'disabled') {
         initMockData()
         return
       }
