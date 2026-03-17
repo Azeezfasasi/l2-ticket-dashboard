@@ -124,7 +124,7 @@ const kpiMetrics = computed(() => {
   const filtered = filteredTicketsForCharts.value
   return [
     { label: 'Open Tickets', value: filtered.length },
-    { label: 'Unassigned Tickets', value: filtered.filter((t) => !t.assignee).length },
+    { label: 'Unassigned Tickets', value: store.tickets.filter((t) => !t.assignee).length },
     { label: 'Waiting for Support', value: filtered.filter((t) => t.status === 'Waiting for support').length },
     { label: 'Waiting For Customer', value: filtered.filter((t) => t.status === 'Waiting for customer').length },
     { label: 'In-Progress', value: filtered.filter((t) => t.status === 'In Progress' || t.status === 'Work in progress').length },
